@@ -1,0 +1,80 @@
+---
+import Navbar from "@bobartelie/shared/components/Navbar.astro"
+//const site = import.meta.env.DEV ? 'http://192.168.1.101:4322/' : ''
+//const app = import.meta.env.DEV ? 'http://192.168.1.101:4321/' : ''
+---
+
+<Navbar>
+    <div>
+        <ul>
+            <li><a role="link" href="#">Cursos</a></li>
+            <li><a role="link" href="#">Cursos</a></li>
+            <li><a role="link" href="#">Cursos</a></li>
+        </ul>
+        <a role="link" href={import.meta.env.SITE_URL}>LOGO</a>
+        <ul>
+            <li><a href={import.meta.env.APP_URL}>Login</a></li>
+            <li><a href={import.meta.env.APP_URL}>Registrar</a></li>
+        </ul>
+    </div>
+</Navbar>
+
+<style>
+    div {
+        > a {
+            display: none;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 1rem;
+            
+            > * {
+                padding-block: 1rem;
+            }
+        }
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    > * {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    @media (min-width: 767px) {
+        div {
+            display: grid !important;
+            grid-template-columns: 5fr 1fr 5fr;
+            align-items: center;
+            
+            > a {
+                display: flex;
+            }
+            
+            > ul {
+                flex-direction: row;
+            }
+            
+            > * {
+                display: flex;
+                list-style: none;
+                gap: 1rem;
+            }
+            
+            
+            > *:nth-child(2){
+                margin: auto;
+            }
+            
+            > *:nth-child(3){
+                margin-left: auto;
+            }
+        }
+    }
+</style>

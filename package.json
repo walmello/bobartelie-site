@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.11"
+    "@bobartelie/shared": "github:walmello/bobartelie-shared",
+    "alpinejs": "^3.15.4",
+    "astro": "^5.16.11",
+    "sass": "^1.97.2"
   }
 }

@@ -1,0 +1,26 @@
+---
+import { faq as f } from "@bobartelie/shared/scripts/Baserow"
+const faq = await f.get()
+---
+
+<section>
+    <div>
+        <h2>Perguntas Frequentes</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laudantium aliquam blanditiis dolorem commodi iste repellat veniam ratione! Corrupti aliquam aliquid explicabo amet obcaecati sunt ut dolorum laborum perferendis quos!
+        </p>
+    </div>
+    <div>
+        {
+            faq.map((question: any) => <article>
+                <details>
+                    <summary>O que é o bob artelier?</summary>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, quod non dolor nisi et expedita at possimus in ipsa aspernatur dolorem. Tempore nesciunt numquam, minima dicta quia officiis vero minus?
+                    </p>
+                </details>
+            </article>
+            )
+        }
+    </div>
+</section>

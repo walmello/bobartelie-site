@@ -1,0 +1,14 @@
+---
+import Footer from "./Footer.astro"
+import Header from "./Header.astro"
+import Page from "@bobartelie/shared/components/Page.astro"
+---
+
+<Page>
+    <Header/>
+    <main>
+        testando se a mudança em site gera um rebuild no app
+        <slot></slot>
+    </main>
+    <Footer/>   
+</Page>

@@ -1,0 +1,39 @@
+---
+import { testimonials as t } from "@bobartelie/shared/scripts/Baserow"
+const testimonials = await t.get()
+---
+<section>
+    <div>
+        <h2>Depoimentos</h2>
+    </div>
+    <section>
+        {
+            testimonials.map((test: any) => <article>
+            <small>
+                <p>{test.Depoimento}</p>
+                <span>
+                    <img src={test.Imagem[0].url} alt=""/>
+                    <p>{test.Name}</p>
+                </span>
+            </small>
+        </article>)
+        }
+    </section>
+</section>
+
+<style>
+    section:has(:not(article)){
+        display: flex;
+    }
+
+    img {
+        width: 4rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 100%;
+        border:  1px solid black;
+    }
+    
+    article {
+        max-width: 20rem;
+    }
+</style>
